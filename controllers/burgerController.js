@@ -1,14 +1,11 @@
-var express = require("express");
-
-var router = express.Router();
-
-// Import the model (burger.js) to use its database functions.
-var burger = require("../models/burger.js");
+const express = require("express");
+const router = express.Router();
+const burger = require("../models/burger-model.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  burger.all(function(data) {
-    var hbsObject = {
+router.get("/", (req, res) => {
+  burger.all(data => {
+    let hbsObject = {
       burgers: data
     };
     console.log(hbsObject);
@@ -16,25 +13,25 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burgers", function(req, res) {
+router.post("/api/burgers", (req, res) => {
   burger.create([
-    "name", "sleepy"  //!update
+    "name", "eaten"
   ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
+    req.body.name, req.body.eaten
+  ], result => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+router.put("/api/burgers/:id", (req, res) => {
+  let condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
   burger.update({
-    sleepy: req.body.sleepy  //!update
-  }, condition, function(result) {
+    eaten: req.body.eaten
+  }, condition, result => {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -44,10 +41,10 @@ router.put("/api/burgers/:id", function(req, res) {
   });
 });
 
-router.delete("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+router.delete("/api/burgers/:id", (req, res) => {
+  let condition = "id = " + req.params.id;
 
-  cat.delete(condition, function(result) {
+  burger.delete(condition, result => {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
