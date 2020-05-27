@@ -6,7 +6,7 @@ var burger = {
       cb(res);
     });
   },
-  // The variables cols and vals are arrays.
+
   create: (cols, vals, cb) => {
     orm.create("burgers", cols, vals, (res) => {
       cb(res);
@@ -24,5 +24,4 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
 module.exports = burger;

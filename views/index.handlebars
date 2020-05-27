@@ -13,6 +13,7 @@
     <div class="col">
       <h2 class="color1">Un-eaten Burgers</h2>
 
+      {{!-- Loop Through & Display Un-eaten Burgers --}}
       <ul>
         {{#each burgers}}
           {{#unless eaten}}
@@ -20,11 +21,13 @@
           {{/unless}}
         {{/each}}
       </ul>
+
     </div>
 
     <div class="col">
       <h2 class="color1">Eaten Burgers</h2>
 
+      {{!-- Loop Through & Display Eaten Burgers --}}
       <ul>
         {{#each burgers}}
           {{#if eaten}}
@@ -32,6 +35,7 @@
           {{/if}}
         {{/each}}
       </ul>
+      
     </div>
   </div>
   
@@ -46,8 +50,8 @@
         </div>
 
         <div class="form-group color1">
-          <input type="radio" name="eaten" value="0" checked> Make!<br>
-          <input type="radio" name="eaten" value="1" > Eat!
+          <input type="radio" name="eaten" value="0" checked> Make<br>
+          <input type="radio" name="eaten" value="1" > Eat
         </div>
 
         <button class="btn btn-secondary" type="submit">Add Burger</button>

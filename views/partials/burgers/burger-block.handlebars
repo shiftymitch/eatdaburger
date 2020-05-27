@@ -1,9 +1,12 @@
 <li>
-	{{name}}
+	<div class="ml-3">
+		{{name}}
+	</div>
+	<div>
+		<button class="change-eat btn btn-danger" data-id="{{id}}" data-neweat="{{eat}}">
+			{{#if eaten}}MAKE{{else}}EAT{{/if}}
+		</button>
 
-	<button class="change-eat btn btn-danger" data-id="{{id}}" data-neweat="{{eat}}">
-		{{#if eaten}}MAKE!{{else}}EAT!{{/if}}
-	</button>
-
-	<button class="delete-burger btn btn-danger" data-id="{{this.id}}">DELETE!</button>
+		<button class="delete-burger btn btn-danger" data-id="{{this.id}}">DELETE</button>
+	</div>
 </li>

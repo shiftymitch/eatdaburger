@@ -1,4 +1,5 @@
 $(() => {
+    //! change eaten status on button click
     $(".change-eat").on("click", function() {
         let id = $(this).data("id");
         let newEat = $(this).data("neweat");
@@ -19,6 +20,7 @@ $(() => {
         );
     });
 
+    //! create a new burger with input form
     $(".create-form").on("submit", () => {
         event.preventDefault();
 
@@ -38,6 +40,7 @@ $(() => {
         );
     });
 
+    //! delete a burger
     $(".delete-burger").on("click", function() {
         let id = $(this).data("id");
 

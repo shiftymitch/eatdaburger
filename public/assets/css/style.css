@@ -4,6 +4,8 @@ li {
   color: #f9f9f9;
   background: #858585;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .label {
@@ -36,7 +38,7 @@ li {
   background-color: #151515;
 }
 
-/* My CSS */
+/* Portfolio Styling */
 body {
   background-color: #f9f9f9;
 }

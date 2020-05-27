@@ -1,8 +1,11 @@
+//! require express & import burger-model
 const express = require("express");
-const router = express.Router();
 const burger = require("../models/burger-model.js");
 
-// Create all our routes and set up logic within those routes where required.
+//! router setup
+const router = express.Router();
+
+//! get all burgers at root
 router.get("/", (req, res) => {
   burger.all(data => {
     let hbsObject = {
@@ -13,6 +16,7 @@ router.get("/", (req, res) => {
   });
 });
 
+//! add new burgers
 router.post("/api/burgers", (req, res) => {
   burger.create([
     "name", "eaten"
@@ -24,6 +28,7 @@ router.post("/api/burgers", (req, res) => {
   });
 });
 
+//! update burger eaten status
 router.put("/api/burgers/:id", (req, res) => {
   let condition = "id = " + req.params.id;
 
@@ -41,6 +46,7 @@ router.put("/api/burgers/:id", (req, res) => {
   });
 });
 
+//! delete burgers
 router.delete("/api/burgers/:id", (req, res) => {
   let condition = "id = " + req.params.id;
 
@@ -54,5 +60,4 @@ router.delete("/api/burgers/:id", (req, res) => {
   });
 });
 
-// Export routes for server.js to use.
 module.exports = router;
