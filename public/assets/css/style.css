@@ -1,7 +1,9 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  color: #f9f9f9;
+  background: #858585;
+  list-style: none;
 }
 
 .label {
@@ -16,4 +18,160 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.color1 {
+  color: #f9f9f9;
+}
+
+.btn-primary {
+  background-color: #c500c5;
+}
+
+.burger {
+  width: 40%;
+}
+
+.burger-cols {
+  background-color: #151515;
+}
+
+/* My CSS */
+body {
+  background-color: #f9f9f9;
+}
+
+.bg1 {
+  background-image: url("../../assets/img/6.png");
+  background-position: 0 0px;
+  background-size: 100%;
+}
+
+.bg2 {
+  background-image: url("../Images/bg/5.png");
+  background-position: 0 0px;
+  background-size: 100%;
+}
+
+.bg3 {
+  background-image: url("../Images/bg/6.png");
+  background-position: 0 0px;
+  background-size: 100%;
+}
+
+div {
+  margin-right: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.navbar {
+  background-color: #151515;
+  text-shadow: 2px 2px 2px #606060;
+  position: relative;
+  top: 0px;
+  z-index: 999;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  /* min-width: 20rem; */
+  min-width: 325px;
+  background-color: #151515;
+  color: #f9f9f9
+}
+
+.card hr {
+  border-top: 1px solid #f9f9f9;
+  opacity: 25%;
+}
+
+.card-title {
+  text-align: center;
+  justify-content: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: 100%;
+}
+
+.btn:hover {
+  background-color: #f9f9f9;
+  color: #151515;
+  border: 1px solid #151515;
+  opacity: 50%;
+}
+
+.btn-danger {
+  opacity: 75%
+}
+
+.project {
+  bottom: 100px;
+  position: static;
+  background-color: #151515;
+  border-radius: 0 0 5px 5px;
+  border-top: solid white;
+}
+
+.project h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-secondary {
+  max-width: auto;
+}
+
+.footer {
+  background-color: #151515;
+  text-shadow: 2px 2px 2px #606060;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  min-width: 50rem;
+}
+
+.email-button, .contact-button {
+  background-color: #151515;
+  font-weight: bolder;
+  color: #f9f9f9;
+}
+
+.contact-button {
+  width: 15rem;
+}
+
+.email-button:hover {
+  background-color: #f9f9f9;
+  color: #151515;
 }

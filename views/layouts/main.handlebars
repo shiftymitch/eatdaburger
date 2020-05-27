@@ -2,12 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>Eat Da Burger</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/burgers.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eat Da Burger</title>
+
+    <link rel="icon" type="image/svg" href="./Assets/Images/cx_logo.svg">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
+</head>
+<body class="bg1">
+	{{!-- Navigation --}}
+    <nav class="navbar navbar-expand-lg navbar-dark position-sticky">
+        <img src="/assets/img/shiftycx_logo_white.png" width="125px" class="d-inline-block align-top mr-4 ml-4" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="https://shiftymitch.github.io/portfolio/2/">[portfolio]<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="https://shiftymitch.github.io/portfolio/2/about.html">about</a>
+                <a class="nav-item nav-link" href="https://shiftymitch.github.io/portfolio/2/contact.html">contact</a>
+            </div>
+        </div>
+    </nav>
+
+	{{!-- Handlebars Feed --}}
+	{{{ body }}}
+
+	{{!-- Footer --}}
+    <footer class="footer mt-5">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <h5 class="text-light">[site & background designed by <a href="https://github.com/shiftymitch" target="_blank">Mitch Henderson</a>]</h5>
+            </div>
+            <p class="text-light">&copy; Copyright 2020</p>
+        </div>
+    </footer>
+</body>
 </html>
