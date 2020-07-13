@@ -13,7 +13,6 @@ $(() => {
             data: newEatState
         }).then(
             () => {
-                console.log("changed eaten to", newEat);
                 // Reload the page to get the updated list
                 location.reload();
             }
@@ -34,7 +33,6 @@ $(() => {
             data: newBurger
         }).then(
             () => {
-                console.log("created new burger");
                 location.reload();
             }
         );
@@ -48,7 +46,6 @@ $(() => {
             type: "DELETE"
         }).then(
             () => {
-                console.log("deleted burger", id);
                 location.reload();
             }
         );

@@ -47,8 +47,6 @@ let orm = {
         queryString += valsToInsert(vals.length);
         queryString += ") ";
 
-        console.log(queryString);
-
         connection.query(queryString, vals, (err, result) => {
             if (err) {
                 throw err;
@@ -64,8 +62,6 @@ let orm = {
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
-
-        console.log(queryString);
 
         connection.query(queryString, (err, result) => {
             if (err) {
